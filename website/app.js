@@ -36,6 +36,7 @@ function perform(e){
 
 //get data  
 const getData = async (url='') => {
+  const units = '&units=metric'
   const req = await fetch(url);
   try {
     const data = await req.json();
@@ -75,7 +76,7 @@ const updataUI = async()=>{
   const last = await req.json()
   console.log(last);
   document.getElementById('date').innerHTML = "date:  "+last[0].data;
-  document.getElementById('temp').innerHTML = "temp:  "+last[0].temp;
+  document.getElementById('temp').innerHTML = "temp:  "+last[0].temp + "C";
   document.getElementById('content').innerHTML = "your feel:  "+last[0].feel
   }catch(error){
     console.log('error',error)
