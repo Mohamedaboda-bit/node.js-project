@@ -1,7 +1,7 @@
 
 const express = require('express');
 const app = express();
-const bodyParser = require('body-Parser');
+const bodyParser = require('body-parser');
 // Start up an instance of app
 
 /* Middleware*/
